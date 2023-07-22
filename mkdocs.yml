@@ -3,7 +3,7 @@ theme:
    name: readthedocs
    highlightjs: true
    locale: pt_BR
-   logo: assets/logo_UFRN.jpg
+   logo: assets/logo_UFRN.png
 nav:
    - Home: index.md
    - Iniciante:
