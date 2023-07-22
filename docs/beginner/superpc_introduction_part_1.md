@@ -1,21 +1,9 @@
-# Tutorial Introdução ao Supercomputador parte 1
+# Introdução ao supercomputador - parte 1
 
 O NPAD oferece como solução um acesso a um supercomputador através de um terminal remoto. Para acessar o supercomputador é necessário utilizar um programa chamado [ssh](https://linuxcommand.org/lc3_man_pages/ssh1.html). O ssh é uma programa que permite fazer login em uma máquina remotamente. Neste tutorial iremos aprender a gerar uma chave ssh, a acessar o supercomputador e a transferir arquivos para o supercomputador. Caso tenha alguma dúvida durante o tutorial, sinta-se à vontade para entrar em contato conosco através do e-mail **atendimento\<at>npad.ufrn.br** (substituindo \<at> por @).
 
-## Tópicos
 
-- [Tutorial Introdução ao Supercomputador parte 1](#tutorial-introdução-ao-supercomputador-parte-1)
-  - [Tópicos](#tópicos)
-  - [Instale os Prerrequisitos](#instale-os-prerrequisitos)
-  - [Gerando uma chave SSH pública](#gerando-uma-chave-ssh-pública)
-  - [Criando uma conta no NPAD](#criando-uma-conta-no-npad)
-  - [Acessando o supercomputador](#acessando-o-supercomputador)
-    - [Dica: Crie uma configuração para ssh](#dica-crie-uma-configuração-para-ssh)
-  - [Acessando arquivos do supercomputador](#acessando-arquivos-do-supercomputador)
-    - [Através de uma interface gráfica](#através-de-uma-interface-gráfica)
-    - [Através do terminal](#através-do-terminal)
-
-## Instale os Prerrequisitos
+## Instale os pré-requisitos
 
 Como dito anteriormente, acessar o supercomputador requer ssh. O ssh é apenas uma das ferramentas do [OpenSSH](https://www.openssh.com/). Então Caso você esteja utilizando Windows você pode seguir por três caminhos:
 
@@ -63,7 +51,9 @@ Para utilizar o supercomputador é necessário criar uma conta na nossa [Página
 Uma vez que tenha cadastro no NPAD, você pode acessar o supercomputador de
 duas formas:
 
-- Usando a aplicação **PuTTy**. Caso deseja usar o PuTTy veja o tutorial do [PuTTy](/beginner/putty_tutorial.md#acessando-o-supercomputador-através-do-putty).
+- Usando a aplicação **PuTTy**. Caso deseja usar o PuTTy veja o tutorial do [PuTTy](../beginner/putty_tutorial.md#acessando-o-supercomputador-atraves-do-putty).
+
+
 
 - através de um terminal como: **Windows PowerShell**, **MobaXterm**, usando o comando **ssh**
 
@@ -135,7 +125,7 @@ ssh super-pc
 ```
 
 Caso você esteja usando MobaXterm, você pode criar uma nova sessão para facilitar
-o acesso ao supercomputador: [MobaXterm tutoriais: criando uma sessão com NPAD](/beginner/mobaxterm_tutorial.md)
+o acesso ao supercomputador: [MobaXterm tutoriais: criando uma sessão com NPAD](../beginner/mobaxterm_tutorial.md)
 
 ## Acessando arquivos do supercomputador
 
