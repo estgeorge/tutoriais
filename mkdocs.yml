@@ -19,15 +19,15 @@ nav:
       - beginner/gnome_files.md
       - beginner/winscp_tutorial.md
       - beginner/scp_tutorial.md
-      - 'Transferir arquivos pelo terminal usando rsync (apenas linux)': 'beginner/rsync_tutorial.md'
-      - 'PuTTy tutoriais': 'beginner/putty_tutorial.md'
-      - 'MobaXterm Tutoriais': 'beginner/mobaxterm_tutorial.md'
+      - beginner/rsync_tutorial.md
+      - beginner/putty_tutorial.md
+      - beginner/mobaxterm_tutorial.md
    - Intermediário:
-      - 'Introdução ao Supercomputador - Parte&nbsp;3': 'intermediate/superpc_introduction_part_3.md'
-      - 'Comandos Slurm': 'intermediate/slurm_commands.md'
-      - 'Instalação de Programas': 'intermediate/install_apps.md'
+      - intermediate/superpc_introduction_part_3.md
+      - intermediate/slurm_commands.md
+      - intermediate/install_apps.md
    - Avançado:
-      - 'Tutorial OpenMP': 'advanced/openmp_tutorial.md'
-      - 'Tutorial MPI': 'advanced/mpi_tutorial.md'
-      - 'Executando Pytorch Rust na partição de gpu': 'advanced/tch-rs_tutorial.md'
-      - 'Tutorial Jupyter': 'advanced/jupyter_tutorial.md' 
+      - advanced/openmp_tutorial.md
+      - advanced/mpi_tutorial.md
+      - advanced/tch-rs_tutorial.md
+      - advanced/jupyter_tutorial.md
