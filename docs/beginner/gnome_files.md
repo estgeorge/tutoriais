@@ -1,4 +1,4 @@
-# Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)
+# Copiando arquivos através de uma interface gráfica Gnome Files (linux)
 
 **Gnome** é a interface padrão do **Ubuntu**. Que é distribuição padrão
 para desenvolvimento do Instituto Metrópole Digital (IMD). Portanto iremos mostrar como conectar o navegador de arquivos padrão do Gnome, chamado **Gnome files** com os seus arquivos no supercomputador. A versão do Gnome files utilizada é a **43.3**
