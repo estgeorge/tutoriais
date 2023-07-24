@@ -3,12 +3,16 @@ theme:
    name: readthedocs
    highlightjs: true
    locale: pt_BR
-   logo: assets/logo_UFRN.png
+   #logo: assets/logo_UFRN.png
+markdown_extensions:
+   - toc: 
+        baselevel: 1 
+        toc_depth: 2-4       
 nav:
-   - Home: index.md
+   - Início: index.md
    - Iniciante:
-      - 'beginner/superpc_introduction_part_1.md'
-      - 'Introdução ao Supercomputador - Parte&nbsp;2': 'beginner/superpc_introduction_part_2.md'
+      - beginner/superpc_introduction_part_1.md
+      - beginner/superpc_introduction_part_2.md
       - 'Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)': 'beginner/gnome_files.md'
       - 'Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)': 'beginner/winscp_tutorial.md'
       - 'Transferir arquivos pelo terminal usando scp': 'beginner/scp_tutorial.md'
