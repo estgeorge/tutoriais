@@ -1,11 +1,10 @@
 site_name: Tutoriais do NPAD
 theme:
-   name: readthedocs
+   name: material
    highlightjs: true
    locale: pt_BR
    features:
-      - content.code.copy
-   
+      - content.code.copy   
    #logo: assets/logo_UFRN.png
 markdown_extensions:
 
