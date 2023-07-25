@@ -1,6 +1,6 @@
 site_name: Tutoriais do NPAD
 theme:
-   name: material
+   name: readthedocs
    highlightjs: true
    locale: pt_BR
    features:
