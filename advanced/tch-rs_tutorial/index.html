@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt_BR" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>tch-rs-example MNIST - Tutoriais do NPAD</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "tch-rs-example MNIST";
+        var mkdocs_page_input_path = "advanced\\tch-rs_tutorial.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tutoriais do NPAD
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" title="Digite o termo a ser buscado aqui" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Iniciante</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../beginner/superpc_introduction_part_1/">Introdução ao supercomputador - Parte&nbsp;1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../beginner/superpc_introduction_part_2/">Introdução ao supercomputador - Parte&nbsp;2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../beginner/gnome_files/">Copiando arquivos através de uma interface gráfica Gnome Files (linux)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../beginner/winscp_tutorial/">Copiando arquivos através de uma interface gráfica WinSCP (Windows)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../beginner/scp_tutorial/">Tutorial do scp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../beginner/rsync_tutorial/">Tutorial do rsync</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../beginner/putty_tutorial/">Tutorial do PuTTy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../beginner/mobaxterm_tutorial/">Tutorial do MobaXterm</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Intermediário</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../intermediate/superpc_introduction_part_3/">Introdução ao supercomputador - Parte&nbsp;3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../intermediate/slurm_commands/">Comandos do supercomputador</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../intermediate/install_apps/">Instalação de programas no supercomputador</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Avançado</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../openmp_tutorial/">Tutorial de OpenMP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mpi_tutorial/">Tutorial de MPI</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">tch-rs-example MNIST</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jupyter_tutorial/">Usando o Jupyter no supercomputador</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Menu de navegação em dispositivo móvel">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tutoriais do NPAD</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Documentos"></a> &raquo;</li>
+          <li>Avançado &raquo;</li>
+      <li>tch-rs-example MNIST</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tch-rs-example-mnist">tch-rs-example MNIST</h1>
+<p>Nesse tutorial você irá aprender a usar a partição <strong>gpu</strong> e rust  para treinar um modelo de deep learning para resolver o <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a>.</p>
+<div class="toc">
+<ul>
+<li><a href="#instalando-dependencias">Instalando dependências</a></li>
+<li><a href="#criando-um-aplicacao-em-rust-para-treinar-uma-rede-neural">Criando um aplicação em rust para treinar uma rede neural</a></li>
+<li><a href="#carregamento-do-conjunto-de-dados-mnist">Carregamento do conjunto de dados MNIST</a><ul>
+<li><a href="#configuracao-do-dispositivo-de-processamento">Configuração do dispositivo de processamento</a></li>
+<li><a href="#criando-um-modelo-deep-learning">Criando um modelo deep learning</a></li>
+<li><a href="#treinamento">Treinamento</a></li>
+</ul>
+</li>
+<li><a href="#executando-a-aplicacao-com-cuda-no-supercomputador">Executando a aplicação com cuda no supercomputador</a></li>
+</ul>
+</div>
+<h2 id="instalando-dependencias">Instalando dependências</h2>
+<p>Primeiro instale o rust toolchain na sua pasta HOME, no nó de login.</p>
+<pre><code class="language-bash">$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre>
+<p>segundo crie um novo projeto rust com cargo chamado pytorch-example. Para esse projeto Adicione as dependências:</p>
+<ul>
+<li><strong>anyhow</strong>, uma biblioteca para facilita o tratamento de erro em rust</li>
+<li><strong>tch</strong> O framework Pytorch para criação de modelos deep learning escrito em C++, mas com bindings para rust</li>
+</ul>
+<pre><code class="language-bash">cargo new pytorch-example
+cd pytorch-example
+cargo add anyhow
+cargo add tch
+</code></pre>
+<h2 id="criando-um-aplicacao-em-rust-para-treinar-uma-rede-neural">Criando um aplicação em rust para treinar uma rede neural</h2>
+<p>A aplicação escrita  em rust, deverá selecionar qual dispositivo de processamento, CPU ou GPU, deverá ser usado para a execução dos cálculos numéricos.
+Carregar o conjunto de dados MNIST para ser computado em tal dispositivo. Criar um modelo deep learning e treinar o modelo. Portanto podemos entender
+a aplicação em  4 partes importantes:  carregamento do conjunto de dados MNIST, configuração do dispositivo, criando um modelo deep learning, treinamento.</p>
+<h2 id="carregamento-do-conjunto-de-dados-mnist">Carregamento do conjunto de dados MNIST</h2>
+<p>Como o MNIST é um conjunto de dados muito famoso, o próprio pytorch possui mecanismos de carregá-lo, desde que você tenha ele baixado e descompactado.
+Para baixar o dataset, você pode criar um script similar ao <a href="https://github.com/samuel-cavalcanti/tch-rs-example/blob/main/get_inputs.sh">get_inputs.sh</a>. Onde basicamente ele cria o diretório chamado <strong>data</strong>
+e baixa os arquivos do dataset e os extrai com <strong>gunzip</strong></p>
+<pre><code class="language-bash">#!/bin/bash 
+# get_inputs.sh
+mkdir data -p
+cd data
+wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz; gunzip train-images-idx3-ubyte.gz
+wget http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz; gunzip train-labels-idx1-ubyte.gz
+wget http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz; gunzip t10k-images-idx3-ubyte.gz
+wget http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz; gunzip t10k-labels-idx1-ubyte.gz
+</code></pre>
+<p>Para carregar o dataset basta usar o a função <strong>tch::vision::mnist::load_dir</strong></p>
+<pre><code class="language-rust">let dataset = match tch::vision::mnist::load_dir(&quot;data&quot;) { Dataset
+          Ok(d) =&gt; d, 
+          Err(_) =&gt; panic!(&quot;Dataset Not found, run the get_inputs.sh !!&quot;),
+};
+</code></pre>
+<h3 id="configuracao-do-dispositivo-de-processamento">Configuração do dispositivo de processamento</h3>
+<p>Utilizando um framework pytorch podemos selecionar o dispositivo da seguinte forma, se uma <strong>GPU</strong> estiver disponível, então utilize GPU. Caso o contrário utilize
+<strong>CPU</strong>. Com o dispositivo podemos criar um conjunto de tensores cujo seus valores <strong>variam</strong> e que esses valores deverão ser capazes de serem armazenados, ou seja
+criamos uma <strong>VarStore</strong>.</p>
+<pre><code class="language-rust"> let device = tch::Device::cuda_if_available();
+ let vs = tch::nn::VarStore::new(device.clone());
+</code></pre>
+<p>Também precisamos transformar ou mover os dados do conjunto de dados para o dispositivo de processamento</p>
+<pre><code class="language-rust">fn dataset_to_device(dataset: Dataset, device: &amp;Device) -&gt; Dataset {
+    let train_labels = dataset.train_labels.to_device(device.clone());
+    let train_images = dataset.train_images.to_device(device.clone());
+    let test_labels = dataset.test_labels.to_device(device.clone());
+    let test_images = dataset.test_images.to_device(device.clone());
+
+    Dataset {
+        test_images,
+        test_labels,
+        train_images,
+        train_labels,
+        labels: dataset.labels,
+    }
+}
+
+let dataset = dataset_to_device(dataset, &amp;device);
+</code></pre>
+<h3 id="criando-um-modelo-deep-learning">Criando um modelo deep learning</h3>
+<p>O modelo deep learning utilizado nesse exemplo será um modelo sequencial simples e com poucas camadas. Em rust o modelo
+ficou assim:</p>
+<pre><code class="language-rust">use tch::{nn, nn::Module};
+const IMAGE_DIM: i64 = 784;
+const HIDDEN_NODES: i64 = 128;
+const LABELS: i64 = 10;
+
+fn net(vs: &amp;nn::Path) -&gt; impl Module {
+    nn::seq()
+        .add(nn::linear(
+            vs / &quot;layer1&quot;,
+            IMAGE_DIM,
+            HIDDEN_NODES,
+            Default::default(),
+        ))
+        .add_fn(|xs| xs.relu())
+        .add(nn::linear(vs, HIDDEN_NODES, LABELS, Default::default()))
+}
+
+let net = net(&amp;vs.root());
+</code></pre>
+<p>Observe que vs (VarStore) é passada na função <strong>net</strong>, de modo que criar uma camada, ou módulo (layer) é alocar novos de tensores, para a variável.</p>
+<h3 id="treinamento">Treinamento</h3>
+<p>Para treinar uma rede neural, pode-se utilizar vários algoritmos de otimização, porém nesse exemplo foi utilizado o <a href="https://pytorch.org/docs/stable/generated/torch.optim.Adam.html">Adam</a>,
+com uma taxa de aprendizado de <strong>0.001</strong>. O modelo será treinado durante 200 interações. Em rust a implementação do treinamento fica da seguinte forma</p>
+<pre><code class="language-rust">let mut opt = nn::Adam::default().build(&amp;vs, 1e-3)?;
+
+for epoch in 1..200 {
+    let loss = net
+            .forward(&amp;dataset.train_images)
+            .cross_entropy_for_logits(&amp;dataset.train_labels);
+        opt.backward_step(&amp;loss);
+        let test_accuracy = net
+            .forward(&amp;dataset.test_images)
+            .accuracy_for_logits(&amp;dataset.test_labels);
+        println!(
+            &quot;epoch: {:4} train loss: {:8.5} test acc: {:5.2}% is cuda: {}&quot;,
+            epoch,
+            f64::try_from(&amp;loss)?,
+            100. * f64::try_from(&amp;test_accuracy)?,
+            device.is_cuda(),
+        );
+    }
+</code></pre>
+<p>Você pode ver a implementação completa em <a href="https://github.com/samuel-cavalcanti/tch-rs-example/blob/main/src/main.rs">main.rs</a></p>
+<h2 id="executando-a-aplicacao-com-cuda-no-supercomputador">Executando a aplicação com cuda no supercomputador</h2>
+<p>Atualmente o supercomputador no NPAD possui uma partição chamada <strong>gpu</strong>, nessa partição encontram-se os nós com GPUs bem potentes capazes de executar a aplicação em 1 segundo.</p>
+<pre><code class="language-bash">#!/bin/bash 
+#SBATCH --job-name=neural_train
+#SBATCH --time=0-0:15
+#SBATCH --partition=gpu
+#SBATCH --exclusive
+
+# informando ao tch-rs que desejo compilar com cuda na versão 11.7
+export TORCH_CUDA_VERSION=cu117
+
+cargo r --release
+</code></pre>
+<p>Cargo é o gerenciador de pacotes official da linguagem Rust, perceba que ao executar o comando <code>cargo r --release</code>. A aplicação cargo irá compilar a aplicação utilizando flags de otimização e irá executar o programa. Caso tenha compilado a aplicação no nó de login, será necessário remover a pasta <strong>target</strong>, antes de submeter o script</p>
+<pre><code class="language-bash"># rm -rf target # caso tenha compilado a aplicação no nó de login.
+
+sbatch run_on_superpc.sh
+</code></pre>
+<p>o script <strong>run_on_superpc.sh</strong> pode ser encontrado <a href="https://github.com/samuel-cavalcanti/tch-rs-example/blob/main/run_on_superpc.sh">aqui</a>. Todo o projeto pode ser encontrado no github <a href="https://github.com/samuel-cavalcanti/tch-rs-example">github.com/samuel-cavalcanti/tch-rs-example</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Navegação no rodapé">
+        <a href="../mpi_tutorial/" class="btn btn-neutral float-left" title="Tutorial de MPI"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+        <a href="../jupyter_tutorial/" class="btn btn-neutral float-right" title="Usando o Jupyter no supercomputador">Seguinte <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Construído com <a href="https://www.mkdocs.org/">MkDocs</a> usando <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provido por <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versões">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mpi_tutorial/" style="color: #fcfcfc">&laquo; Anterior</a></span>
+    
+    
+      <span><a href="../jupyter_tutorial/" style="color: #fcfcfc">Seguinte &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
