@@ -1,4 +1,4 @@
-# Tutorial de instalação de programas no supercomputador
+# Instalação de programas no supercomputador
 
 No supercomputador, há diversos programas instalados para todos os usuários. Caso deseje instalar um novo software no supercomputador, você pode solicitar que a equipe do NPAD faça a instalação, através da nossa [Página de Solicitação de Software](http://npad.ufrn.br/solicitarNovoSoftware.php). Entretanto, esse pedido de software será analisado e apenas softwares a serem utilizados por diversos pesquisadores serão aprovados. Os software aprovados entrarão na fila de tarefas da equipe do NPAD e serão instalados assim que possível. Caso sua necessidade de instalação seja urgente ou o software que você deseja instalar não seja largamente utilizado por pesquisadores, você poderá instalar o programa desejado na sua pasta pessoal seguindo uma das duas formas de instalação.
 Instalação manual ou através do gerenciador de pacotes
