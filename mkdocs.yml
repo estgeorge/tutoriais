@@ -8,11 +8,6 @@ markdown_extensions:
    - toc: 
         baselevel: 1 
         toc_depth: 2-4  
-   - fenced_code
-   - admonition
-#   - pymdownx.highlight:
-#      use_pygments: true
-#   - pymdownx.superfences
 nav:
    - Início: index.md
    - Iniciante:
